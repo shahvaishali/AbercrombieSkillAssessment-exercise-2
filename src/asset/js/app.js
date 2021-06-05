@@ -173,7 +173,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
       }else{
         taskNames = JSON.parse(localStorage.getItem(key));
       }
-      taskNames.unshift(value);
+      taskNames.push(value);
       localStorage.setItem(key, JSON.stringify(taskNames));
     }
     
