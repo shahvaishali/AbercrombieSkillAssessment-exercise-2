@@ -1,0 +1,158 @@
+$font-stack: Lato, sans-serif
+$font-size: 15px
+
+$primary-color: gray
+$secondary-color: #888888
+$background-color: #ffffff
+$text-color: #333
+$green: #0FC57C
+$red: #CF2323
+
+/* Basic Style */
+body 
+  background: $background-color
+  color: $text-color
+  font-family: $font-stack
+
+.container 
+  display: flex
+  flex-direction: column
+  width: 600px
+  margin: 100px auto 0
+
+ul 
+  margin: 0px
+  padding: 0px
+
+li * 
+  display: inline-flex
+
+li, h3 
+  clear: both
+  list-style: none
+
+input, button 
+  outline: none
+
+button 
+  background: none
+  border: 0px
+  color: $secondary-color
+  font-size: $font-size
+  width: 60px
+  font-family: $font-stack
+  cursor: pointer
+
+  &:hover 
+    color: $text-color
+  &:focus
+    border: 1px solid gray
+
+input[type="checkbox"]
+  &:focus
+    outline: gray auto 5px
+
+/* Heading */
+h3, label[for='new-task'] 
+  color: $text-color
+  font-weight: 700
+  font-size: $font-size
+  border-bottom: 2px solid $text-color
+  padding: 30px 0 10px
+  margin: 0px
+  text-transform: uppercase
+
+input[type="text"]  
+  margin: 0
+  font-size: $font-size
+  line-height: 18px
+  height: 18px
+  padding: 10px
+  border: 1px solid #ddd
+  background: $background-color
+  border-radius: 6px
+  font-family: $font-stack
+  color:$secondary-color
+
+  &:focus 
+    color: $text-color
+
+/* New Task */
+#new-task
+  display: inline-flex
+  width: 68%
+
+
+#add-button
+  &:hover 
+    color: $green
+
+/* Task list */
+li 
+  overflow: hidden
+  padding: 20px 0px
+  border-bottom: 1px solid #eee
+
+  input[type="checkbox"] 
+    margin: 0 10px
+    position: relative
+  
+  label 
+    font-size:$font-size
+    line-height: 40px
+    width: 60%
+    padding:0 0 0 11px
+    word-break: break-all
+  
+  input[type="text"] 
+    width: 60%
+  
+  .delete
+    &:hover 
+      color: $red
+  
+/* Completed */
+#completed-tasks label 
+  text-decoration: line-through
+  color:$secondary-color
+
+/* Edit Task */
+ul 
+  li 
+    input[type=text] 
+      display: none
+    
+.editMode 
+  input[type=text] 
+    display: inline-flex
+
+  label 
+    display: none
+
+.input-error
+  outline: 1px solid red
+
+@media screen and (max-width: 375px)
+  .container 
+    width: 100%
+    
+  #new-task 
+    width: 72%
+  
+  li
+    input[type="text"] 
+      width: 39%
+  
+    label 
+      width: 40%
+
+#addForm, li
+  margin: 20px 0 0
+  display: flex
+  justify-content: space-between
+  align-content: center
+  align-items: center
+
+@media screen and (min-device-width: 375px) and (max-device-width: 767px) and (orientation:portrait)
+  .container 
+    width: 81%

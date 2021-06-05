@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Todo list App</title>
+    <link rel="stylesheet" type="text/css" href="src/asset/css/style.css" />
+    <link
+      href="http://fonts.googleapis.com/css?family=Lato:300,400,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <meta content="width=device-width, initail-scale=1" name="viewport"/>
+  </head>
+
+  <body>
+    <div class="container">
+
+      <!-- Add List -->
+      <h3 tabindex="0"> Add Item </h3>
+        <form id="addForm" name="addForm" onsubmit="return false;">
+            <input tabindex="0" type="text" id="new-task" name="new-task" required>
+            <button tabindex="0" aria-pressed="false" id="add-button">Add</button>
+        </form>
+		
+      <!-- To do Lists  -->
+      <h3 tabindex="0"> Todo </h3>
+        <form id="toDoForm" name="toDoForm" onsubmit="return false;" >
+          <ul id="incomplete-tasks"></ul>
+        </form>
+
+      <!-- Completed Lists -->
+      <h3 tabindex="0"> Completed </h3>
+      <ul id="completed-tasks"></ul>
+    </div>
+	<script src="src/asset/js/app.js"></script>
+  </body>
+</html>

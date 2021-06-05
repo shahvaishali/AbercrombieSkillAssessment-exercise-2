@@ -1,0 +1,22 @@
+{
+  "name": "cs-code-challenge-exercise-2",
+  "version": "1.0.0",
+  "description": "A simple keyboard-accessible task tracker app that keeps you up-to-date with the to-do list.",
+  "main": "index.html",
+  "scripts": {
+    "css-builder": "sass --watch  src/asset/sass/style.sass:src/asset/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shahvaishali/AbercrombieSkillAssessment-exercise-2.git"
+  },
+  "author": "Vaishali Shah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shahvaishali/AbercrombieSkillAssessment-exercise-2/issues"
+  },
+  "homepage": "https://github.com/shahvaishali/AbercrombieSkillAssessment-exercise-2#readme",
+  "dependencies": {
+    "sass": "^1.34.1"
+  }
+}
